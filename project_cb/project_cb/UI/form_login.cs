@@ -18,5 +18,15 @@ namespace project_cb
         {
             InitializeComponent();
         }
+
+        private void btn_batal_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
