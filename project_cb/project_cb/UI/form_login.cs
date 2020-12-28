@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MetroFramework.Forms;
+using project_cb.Controllers;
 
 
 namespace project_cb
@@ -20,6 +21,8 @@ namespace project_cb
             InitializeComponent();
         }
 
+        controller_login cont_login = new controller_login();
+
         private void btn_batal_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -27,7 +30,32 @@ namespace project_cb
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-
+            if (cont_login.validate_login(txt_username.Text, txt_password.Text) != "")
+            {
+                string role = cont_login.get_role_user(txt_username.Text, txt_password.Text);
+                if (role == "admin")
+                {
+                    this.Hide();
+                    form_login fr_login = new form_login();
+                    fr_login.ShowDialog();
+                    this.Close();
+                }
+                else if (role == "staff")
+                {
+                    this.Hide();
+                    form_login fr_login = new form_login();
+                    fr_login.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    //MetroMessageBox.Show(this, "USERNAME ATAU PASSWORD SALAH!", "KESALAHAN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                //MetroMessageBox.ActiveForm.Show(this, "USERNAME ATAU PASSWORD SALAH!", "KESALAHAN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

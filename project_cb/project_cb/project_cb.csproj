@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\controller_login.cs" />
+    <Compile Include="DAO\dao_login.cs" />
     <Compile Include="Models\anggota.cs" />
     <Compile Include="Models\klaim.cs" />
     <Compile Include="UI\form_login.cs">
@@ -98,7 +100,6 @@
     <Content Include="MetroFramework.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Reports\" />
   </ItemGroup>
