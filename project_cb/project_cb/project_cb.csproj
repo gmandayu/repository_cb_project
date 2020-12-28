@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\anggota.cs" />
+    <Compile Include="Models\klaim.cs" />
     <Compile Include="UI\form_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,7 +100,6 @@
   <ItemGroup>
     <Folder Include="DAO\" />
     <Folder Include="Exceptions\" />
-    <Folder Include="Models\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
