@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using project_cb.UI;
 using MetroFramework.Forms;
 using project_cb.Controllers;
 
@@ -36,8 +37,8 @@ namespace project_cb
                 if (role == "admin")
                 {
                     this.Hide();
-                    form_login fr_login = new form_login();
-                    fr_login.ShowDialog();
+                    form_utama fr_utama = new form_utama();
+                    fr_utama.ShowDialog();
                     this.Close();
                 }
                 else if (role == "staff")
