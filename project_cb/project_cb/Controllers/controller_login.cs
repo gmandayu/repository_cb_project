@@ -4,13 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using project_cb.DAO; 
+using project_cb.Objects.DAO; 
 
 namespace project_cb.Controllers
 {
     class controller_login
     {
         dao_login dao_login = new dao_login();
+        public string validateLogin(string _username, string _password)
+        {
+            return dao_login.validateLogin(_username, _password);
+        }
+
+        public string validateUser(string _username, string _password)
+        {
+            return "";
+        }
+
         public string validate_login(string username, string password)
         { return dao_login.validate_login(username, password); }
 

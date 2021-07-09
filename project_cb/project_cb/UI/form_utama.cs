@@ -26,6 +26,7 @@ namespace project_cb.UI
 
         private void form_utama_Load(object sender, EventArgs e)
         {
+            /*
             Excel.Application excel_app = new Microsoft.Office.Interop.Excel.Application();
             if (excel_app == null)
             {
@@ -51,6 +52,7 @@ namespace project_cb.UI
             Marshal.ReleaseComObject(excel_app);
 
             MessageBox.Show("Excel file created!");
+            */
         }
         
         private void set_datagridview_anggota(DataGridView dg)

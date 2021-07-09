@@ -13,7 +13,7 @@ namespace project_cb.DAO
         {
             // LOCALHOST PAKAI INI //
             server = "localhost"; database = ""; userid = "root"; password = "";
-            string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + userid + ";" + "PASSWORD=" + password + ";";
             return connectionString;
         }
     }
